@@ -1,7 +1,6 @@
 // Variables //
 
 // Colors
-
 $white: #fff;
 $black: #000;
 
@@ -15,11 +14,11 @@ $gutter: 60px;
 $transition: 0.3s ease-in-out;
 
 // Fonts
-// $roboto: 'robotoregular', sans-serif;
+$roboto: sans-serif;
 
 // Mediaqueries
-
-$desktop-big: 1260px;
-$desktop: 960px;
+$desktop: 1100px;
+$desktop-small: 960px;
 $tablet: 780px;
 $phone: 580px;
+$phone-small: 400px;

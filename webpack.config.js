@@ -6,6 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const config = (env, options) => {
     const devMode = options.mode !== 'production';
+    const LAMBDA_FUNCTIONS_PORT = 9000;
     return {
         entry: './src/js/main.js',
         output: {
@@ -76,8 +77,7 @@ const config = (env, options) => {
         plugins: [
             new CopyWebpackPlugin([
                 { from: 'src/*.html', flatten: true },
-                { from: 'src/img/', to: 'img/' },
-                { from: 'src/old-assets/', to: 'old-assets/' }
+                { from: 'src/img/', to: 'img/' }
             ]),
             new MiniCssExtractPlugin({
                 filename: 'main.css'

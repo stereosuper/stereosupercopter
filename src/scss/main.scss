@@ -9,12 +9,10 @@
 
 @import 'base/reset', 'base/fonts', 'base/base';
 
-@import 'layout/grid', 'layout/forms', 'layout/header', 'layout/footer',
-    'layout/advice', 'layout/testimonies';
+@import 'layout/grid', 'layout/header', 'layout/footer';
 
-@import 'components/buttons', 'components/card', 'components/social',
-    'components/form-nav', 'components/popin';
+@import 'components/buttons';
 
-@import 'pages/home', 'pages/moncompte';
+@import 'pages/home';
 
 @import 'base/print';

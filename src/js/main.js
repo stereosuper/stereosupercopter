@@ -1,9 +1,7 @@
 import '../scss/main.scss';
 import { superLoad } from '@stereorepo/sac';
 
-
-const preloadHandler = () => {
-};
+const preloadHandler = () => {};
 
 superLoad.initializeLoadingShit({
     preloadCallback: preloadHandler,
