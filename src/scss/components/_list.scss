@@ -1,0 +1,69 @@
+body {
+    counter-reset: defis;
+}
+
+.main-column-container {
+}
+
+.unchecked {
+    color: $white;
+    font-family: 'elena';
+    font-size: 20px;
+    display: flex;
+    align-items: flex-start;
+    &::before {
+        flex: 0 0 auto;
+        width: 50px;
+        height: auto;
+        margin: 0;
+        padding-right: 10px;
+        text-decoration: none;
+        border-radius: 0;
+        display: inline;
+        vertical-align: baseline;
+        counter-increment: defis;
+        content: '#' counter(defis) '';
+        line-height: 1.5;
+    }
+    p {
+        margin: 0px;
+    }
+    div {
+        flex: 0 0 auto;
+        margin: 7px 10px 0 0;
+        height: 15px;
+        width: 15px;
+        border: 1px solid $white;
+    }
+}
+
+.checked {
+    color: $grey;
+    font-family: 'elena';
+    font-size: 20px;
+    text-decoration: line-through;
+    display: flex;
+    &::before {
+        width: 50px;
+        height: auto;
+        text-decoration: none;
+        margin: 0;
+        margin-top: 3px;
+        border-radius: 0;
+        display: inline;
+        vertical-align: baseline;
+        counter-increment: defis;
+        content: '#' counter(defis) '';
+    }
+    p {
+        margin: 0px;
+    }
+    div {
+        margin-top: 7.5px;
+        margin-right: 10px;
+        height: 15px;
+        width: 15px;
+        border: 1px solid $grey;
+        background-color: $grey;
+    }
+}
