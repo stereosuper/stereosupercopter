@@ -1,110 +1,117 @@
 /******* GÉNÉRAL *******/
 
-::-moz-selection{
+::-moz-selection {
     background: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     text-shadow: none;
 }
-::selection{
+::selection {
     background: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     text-shadow: none;
 }
 
-html{
+html {
     font-size: 62.5%; /* sets the base font to 10px for easier math */
-    background: $white;
+    background: $black;
     color: $black;
     min-height: 100%;
     position: relative;
-    &.full-height{
+    &.full-height {
         min-height: 0;
         height: 100%;
     }
 }
 
-body{
+body {
     font-family: $roboto;
     font-size: 1.6em;
     line-height: 1;
     height: 100%;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: $roboto;
     font-size: 2.5em;
     font-weight: 400;
 }
 
-h1{
+h1 {
     font-size: 4.3rem;
     margin: 0 0 0.65em;
 }
 
-h2{
+h2 {
     padding: 0 65px;
     margin: 2em 0 1em;
     font-size: 4rem;
 }
 
-h3{
+h3 {
     font-size: 1.25em;
     padding: 2em 0 0.5em;
     margin: 0 0 1em;
 }
 
-h4{
+h4 {
     font-size: 1.1em;
     margin: 0 0 7px 0;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-h5{
+h5 {
     font-size: 1.25em;
     line-height: 1em;
     margin: 5px 0 2px 0;
 }
 
-h6{
+h6 {
     font-size: 1em;
     margin: 0;
 }
 
-p{
+p {
     margin: 1.55em 0;
     line-height: 1.5;
 }
 
-b, strong{
+b,
+strong {
     font-family: $roboto;
 }
 
-i, em{
+i,
+em {
     font-family: $roboto;
     font-style: normal;
-    strong{
+    strong {
         font-family: $roboto;
     }
-    b{
+    b {
         font-family: $roboto;
     }
 }
 
-blockquote{
+blockquote {
     position: relative;
     margin: 1em 40px;
     font-family: $roboto;
     font-size: 1.2em;
     line-height: 1.25;
-    &:before{
+    &:before {
         content: '"';
         position: absolute;
         top: 0;
         left: -20px;
         font-size: 35px;
     }
-    cite{
+    cite {
         display: block;
         margin: 0 0 5px;
         text-transform: uppercase;
@@ -115,21 +122,22 @@ blockquote{
     }
 }
 
-ol, ul{
+ol,
+ul {
     padding: 0;
     margin: 1em 0;
     font-family: $roboto;
     line-height: 1.2;
     list-style: none;
-    li{
+    li {
         margin: 0 0 8px;
-        &:before{
+        &:before {
             display: inline-block;
         }
     }
 }
-ul > li{
-    &:before{
+ul > li {
+    &:before {
         content: '';
         width: 5px;
         height: 5px;
@@ -138,12 +146,12 @@ ul > li{
         vertical-align: middle;
     }
 }
-ol{
+ol {
     counter-reset: counter;
-    > li{
+    > li {
         counter-increment: counter;
-        &:before{
-            content: counter(counter)'.';
+        &:before {
+            content: counter(counter) '.';
             margin: 0 5px 0 0;
             font-family: $roboto;
             font-size: 0.85em;
@@ -152,125 +160,126 @@ ol{
     }
 }
 
-img{
+img {
     max-width: 100%;
     height: auto;
 }
 
-address{
+address {
     font-style: normal;
     margin: 25px 0 0;
-    ul{
+    ul {
         margin: 0;
         padding: 0;
         line-height: normal;
-        > li{
+        > li {
             margin: 6px 0;
             padding: 0;
             font-size: 0.875em;
-            &:before{
+            &:before {
                 display: none;
             }
         }
     }
-    strong{
+    strong {
         text-transform: uppercase;
         letter-spacing: 1px;
     }
 }
 
-
 /******* LIENS / BOUTONS *******/
 
-a, button{
+a,
+button {
     color: $white;
     transition: $transition;
-    &:focus, &:hover{
+    &:focus,
+    &:hover {
         color: $white;
     }
-    &:focus{
+    &:focus {
         outline: 0;
     }
-    &:active{
+    &:active {
         color: $white;
     }
 }
 
-
 /******* CLASSES GENERALES  *******/
 
-.icon{
+.icon {
     width: 1em;
     height: 1em;
     fill: currentColor;
 }
 
-.hidden{
+.hidden {
     display: none !important;
 }
 
-.wrapper-alignment{
+.wrapper-alignment {
     display: table;
     width: 100%;
     table-layout: fixed;
     border-spacing: 0;
 }
 
-.content-align-middle{
+.content-align-middle {
     display: table-cell;
     vertical-align: middle;
 }
 
-.content-align-top{
+.content-align-top {
     display: table-cell;
     vertical-align: top;
 }
 
-.clearfix{
+.clearfix {
     @include clearfix;
 }
 
-.position-relative{
+.position-relative {
     position: relative;
 }
 
-.center-align{
+.center-align {
     text-align: center;
 }
 
-.right-align{
+.right-align {
     text-align: right;
 }
 
-.inline-b{
+.inline-b {
     display: inline-block;
     vertical-align: middle;
-    transform: translateY(-.1em);
+    transform: translateY(-0.1em);
 }
 
-.full-width{
+.full-width {
     width: 100%;
 }
 
-.full-height{
+.full-height {
     height: 100%;
 }
 
-.wrapper-overflow-hidden{
+.wrapper-overflow-hidden {
     position: relative;
     overflow: hidden;
 }
 
-.img-fit{
+.img-fit {
     &.compat-object-fit {
         background-size: cover;
         background-position: 50% 50%;
-        img { // hide image if object fit is not supported - opacity to 0 for the link area
+        img {
+            // hide image if object fit is not supported - opacity to 0 for the link area
             opacity: 0;
         }
     }
 }
 
-.above-title{
+.above-title {
     margin-bottom: 0;
 }
