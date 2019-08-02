@@ -8,10 +8,21 @@
         <link rel="stylesheet" href="/main.css" />
     </head>
     <body>
-        <div id="tadaa"></div>
-        <div id="helico"></div>
+        <div id="tada">
+            TADADADADAA <br />
+            DAAAAAAAAAAAAAAAAAA
+        </div>
+        <div id="helico">
+            <!-- <video autoplay muted loop width="auto" height="auto">
+                <source
+                    src="../src/img/stéréosupercopterdelamortquitue.m4v"
+                    type="video/mp4"
+                />
+            </video> -->
+        </div>
         <main>
             <svg
+                class="logo"
                 width="94"
                 height="43"
                 viewBox="0 0 94 43"
@@ -33,16 +44,20 @@
             </svg>
             <div class="home-container">
                 <h1>Stéréosupercopter ?</h1>
-                <p>
+                <p class="concept">
                     Une liste de défis à réaliser sur l'ensemble de l'année.
                     <br />
                     Les défis réalisé sont à poster sur Twitter ou Instagram
                 </p>
-                <p>
-                    Mettre son prénom entre deux crochets : [Josiane 🚀] <br />
-                    Utiliser le hashtag #stereosupercopter + le hastag du numéro
-                    de défi ex. #26
-                </p>
+                <ul class="rules">
+                    <li>
+                        Mettre son prénom entre deux crochets : [Josiane 🚀]
+                    </li>
+                    <li>
+                        Utiliser le hashtag #stereosupercopter + le hastag du
+                        numéro de défi ex. #26
+                    </li>
+                </ul>
             </div>
             <div class="main-column-container">
                 <ul>
@@ -50,7 +65,7 @@
                         <div></div>
                         <p>Faire 3 Discoburo en un mois</p>
                     </li>
-                    <li class="unchecked">
+                    <li class="checked">
                         <div></div>
                         <p>Cuisine Africaine au bureau avec tout le monde</p>
                     </li>
@@ -201,9 +216,15 @@
                         </p>
                     </li>
                 </ul>
-                <h2><a href="">Soumettre un défi au StéréoGang!</a></h2>
             </div>
         </main>
+        <h2>
+            <a
+                target="_blank"
+                href="https://twitter.com/intent/tweet?hashtags=stereosupercopter&ref_src=twsrc%5Etfw&text=Je%20propose...%20%40stereosuper&tw_p=tweetbutton"
+                >Soumettre un défi au StéréoGang!</a
+            >
+        </h2>
         <script src="/main.js"></script>
     </body>
 </html>

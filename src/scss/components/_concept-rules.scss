@@ -1,0 +1,22 @@
+h1 {
+    font-family: 'gotham';
+    font-size: 28px;
+    margin: 0px 0 30px 79px;
+    text-transform: uppercase;
+    z-index: 100;
+}
+.concept,
+.rules {
+    font-family: 'elena';
+    font-size: 20px;
+    margin: 0 0 0 79px;
+}
+
+.rules {
+    margin-top: 20px;
+    color: $grey;
+    list-style-type: none;
+    li::before {
+        display: none;
+    }
+}

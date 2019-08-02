@@ -1,0 +1,18 @@
+#tada {
+    font-size: 225px;
+    font-family: 'gotham';
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    font-weight: 900;
+    color: $white;
+    opacity: 0.1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: -2;
+}
