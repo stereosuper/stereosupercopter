@@ -1,7 +1,5 @@
 @charset 'utf-8';
 
-// @import 'previous-style/main.css', 'previous-style/Site.css';
-
 @import 'abstracts/variables', 'abstracts/functions', 'abstracts/mixins',
     'abstracts/animations';
 
@@ -11,8 +9,7 @@
 
 @import 'layout/grid', 'layout/header', 'layout/footer';
 
-@import 'components/list', 'components/helico', 'components/submit',
-    'components/concept-rules', 'components/tada', 'components/buttons';
+@import 'components/buttons';
 
 @import 'pages/home';
 

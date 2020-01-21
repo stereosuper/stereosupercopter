@@ -1,11 +1,7 @@
 import '../scss/main.scss';
 import { superLoad } from '@stereorepo/sac';
 
-import tada from './components/tada';
-
-const preloadHandler = () => {
-    tada();
-};
+const preloadHandler = () => {};
 
 superLoad.initializeLoadingShit({
     preloadCallback: preloadHandler,

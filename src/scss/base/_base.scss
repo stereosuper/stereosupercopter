@@ -14,20 +14,12 @@
 html {
     font-size: 62.5%; /* sets the base font to 10px for easier math */
     background: $black;
-    color: $black;
-    min-height: 100%;
-    position: relative;
-    &.full-height {
-        min-height: 0;
-        height: 100%;
-    }
+    color: $white;
 }
 
 body {
     font-family: $roboto;
     font-size: 1.6em;
-    line-height: 1;
-    height: 100%;
 }
 
 h1,
@@ -98,30 +90,6 @@ em {
     }
 }
 
-blockquote {
-    position: relative;
-    margin: 1em 40px;
-    font-family: $roboto;
-    font-size: 1.2em;
-    line-height: 1.25;
-    &:before {
-        content: '"';
-        position: absolute;
-        top: 0;
-        left: -20px;
-        font-size: 35px;
-    }
-    cite {
-        display: block;
-        margin: 0 0 5px;
-        text-transform: uppercase;
-        font-family: $roboto;
-        font-size: 1.2rem;
-        letter-spacing: 1.2px;
-        font-style: normal;
-    }
-}
-
 ol,
 ul {
     padding: 0;
@@ -136,16 +104,6 @@ ul {
         }
     }
 }
-ul > li {
-    &:before {
-        content: '';
-        width: 5px;
-        height: 5px;
-        margin: 0 10px 0 0;
-        border-radius: 50%;
-        vertical-align: middle;
-    }
-}
 ol {
     counter-reset: counter;
     > li {
@@ -153,9 +111,6 @@ ol {
         &:before {
             content: counter(counter) '.';
             margin: 0 5px 0 0;
-            font-family: $roboto;
-            font-size: 0.85em;
-            color: #ef792d;
         }
     }
 }
@@ -164,29 +119,6 @@ img {
     max-width: 100%;
     height: auto;
 }
-
-address {
-    font-style: normal;
-    margin: 25px 0 0;
-    ul {
-        margin: 0;
-        padding: 0;
-        line-height: normal;
-        > li {
-            margin: 6px 0;
-            padding: 0;
-            font-size: 0.875em;
-            &:before {
-                display: none;
-            }
-        }
-    }
-    strong {
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-}
-
 /******* LIENS / BOUTONS *******/
 
 a,
@@ -215,71 +147,4 @@ button {
 
 .hidden {
     display: none !important;
-}
-
-.wrapper-alignment {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-    border-spacing: 0;
-}
-
-.content-align-middle {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.content-align-top {
-    display: table-cell;
-    vertical-align: top;
-}
-
-.clearfix {
-    @include clearfix;
-}
-
-.position-relative {
-    position: relative;
-}
-
-.center-align {
-    text-align: center;
-}
-
-.right-align {
-    text-align: right;
-}
-
-.inline-b {
-    display: inline-block;
-    vertical-align: middle;
-    transform: translateY(-0.1em);
-}
-
-.full-width {
-    width: 100%;
-}
-
-.full-height {
-    height: 100%;
-}
-
-.wrapper-overflow-hidden {
-    position: relative;
-    overflow: hidden;
-}
-
-.img-fit {
-    &.compat-object-fit {
-        background-size: cover;
-        background-position: 50% 50%;
-        img {
-            // hide image if object fit is not supported - opacity to 0 for the link area
-            opacity: 0;
-        }
-    }
-}
-
-.above-title {
-    margin-bottom: 0;
 }
