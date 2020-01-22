@@ -3,7 +3,8 @@
 // Colors
 $white: #fff;
 $black: #000;
-$grey: #8a8a8a;
+$grey: #c4c4c4;
+$primary: #00a9e0;
 
 // Transition delay list
 
@@ -15,9 +16,9 @@ $gutter: 30px;
 $transition: 0.3s ease-in-out;
 
 // Fonts
-$roboto: sans-serif;
-$elena: 'elena';
-$elena-bold: 'elena-bold';
+
+$elena: 'elena', sans-serif;
+$gotham: 'Gotham SSm A', 'Gotham SSm B', $elena;
 
 // Mediaqueries
 $desktop: 1100px;

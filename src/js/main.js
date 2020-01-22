@@ -1,9 +1,12 @@
 import '../scss/main.scss';
 import { superLoad } from '@stereorepo/sac';
+import stereosupercopter from './Stereosupercopter';
 
-const preloadHandler = () => {};
+const loadHandler = () => {
+    stereosupercopter();
+};
 
 superLoad.initializeLoadingShit({
-    preloadCallback: preloadHandler,
+    loadCallback: loadHandler,
     noTransElementsClass: '.element-without-transition-on-resize'
 });

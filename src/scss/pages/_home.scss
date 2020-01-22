@@ -1,1 +1,29 @@
 /* Home specific style */
+
+.hero {
+    padding: 15vh 0 10vh;
+    position: relative;
+}
+
+.stereosupercopter {
+    max-width: 40vw;
+    position: fixed;
+    top: 150px;
+    left: $gutter;
+    transform: rotate(-5deg);
+    > img {
+        margin: 10% 0 0;
+    }
+}
+
+.helices {
+    position: absolute;
+    width: 150%;
+    height: 0;
+    padding: 0 0 23.3%;
+    top: 0;
+    left: 50%;
+    background: url(../img/helices.png) no-repeat;
+    background-size: 200% auto;
+    transform: translate3d(-50%, 0, 0);
+}

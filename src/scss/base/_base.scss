@@ -1,13 +1,13 @@
 /******* GÉNÉRAL *******/
 
 ::-moz-selection {
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    background: $primary;
+    color: #fff;
     text-shadow: none;
 }
 ::selection {
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    background: $primary;
+    color: #fff;
     text-shadow: none;
 }
 
@@ -18,8 +18,9 @@ html {
 }
 
 body {
-    font-family: $roboto;
-    font-size: 1.6em;
+    font: 2em / 1.5 $elena;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -28,89 +29,58 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $roboto;
-    font-size: 2.5em;
-    font-weight: 400;
-}
-
-h1 {
-    font-size: 4.3rem;
-    margin: 0 0 0.65em;
-}
-
-h2 {
-    padding: 0 65px;
     margin: 2em 0 1em;
-    font-size: 4rem;
-}
-
-h3 {
-    font-size: 1.25em;
-    padding: 2em 0 0.5em;
-    margin: 0 0 1em;
-}
-
-h4 {
-    font-size: 1.1em;
-    margin: 0 0 7px 0;
+    font-family: $gotham;
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-h5 {
-    font-size: 1.25em;
-    line-height: 1em;
-    margin: 5px 0 2px 0;
-}
-
-h6 {
-    font-size: 1em;
-    margin: 0;
 }
 
 p {
-    margin: 1.55em 0;
-    line-height: 1.5;
+    margin: 1.5em 0 0;
 }
 
-b,
-strong {
-    font-family: $roboto;
-}
-
-i,
-em {
-    font-family: $roboto;
-    font-style: normal;
-    strong {
-        font-family: $roboto;
-    }
-    b {
-        font-family: $roboto;
+li {
+    p {
+        margin: 0;
     }
 }
-
 ol,
 ul {
     padding: 0;
-    margin: 1em 0;
-    font-family: $roboto;
-    line-height: 1.2;
+    margin: 0.5em 0 0;
     list-style: none;
-    li {
-        margin: 0 0 8px;
+    > li {
+        position: relative;
         &:before {
-            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: -20px;
+        }
+    }
+}
+ul {
+    color: $grey;
+    > li {
+        &:before {
+            content: '-';
         }
     }
 }
 ol {
+    margin: 100px 0;
     counter-reset: counter;
     > li {
+        margin: 0 0 10px;
         counter-increment: counter;
         &:before {
-            content: counter(counter) '.';
-            margin: 0 5px 0 0;
+            content: '#' counter(counter);
+            width: 35px;
+            font-size: 1.6rem;
+            line-height: 30px;
+            left: -45px;
+            text-align: right;
         }
     }
 }
@@ -123,17 +93,14 @@ img {
 
 a,
 button {
-    color: $white;
+    color: inherit;
     transition: $transition;
     &:focus,
     &:hover {
-        color: $white;
+        color: $primary;
     }
     &:focus {
         outline: 0;
-    }
-    &:active {
-        color: $white;
     }
 }
 
