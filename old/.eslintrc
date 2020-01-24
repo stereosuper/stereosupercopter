@@ -7,29 +7,24 @@
     },
     "parserOptions": {
         "parser": "babel-eslint",
-        "ecmaVersion": 2018,
-        "sourceType": "module"
+        "ecmaVersion": 6
     },
     "extends": [
         "eslint:recommended",
-        "prettier",
-        "prettier/vue",
         "plugin:vue/recommended",
+        "prettier/vue",
         "plugin:prettier/recommended"
     ],
-    "plugins": ["prettier"],
+    // required to lint *.vue files
+    "plugins": ["vue"],
     // add your custom rules here
     "rules": {
         "no-console": "off",
-        "no-unused-vars": "warn",
+        "no-unused-vars": 1,
         "no-useless-escape": "off",
-        "quotes": ["error", "single"],
-        "object-curly-spacing": ["error", "always"],
-        "array-bracket-spacing": ["error", "never"],
-        "arrow-parens": ["error", "as-needed"],
         "vue/component-name-in-template-casing": ["error", "PascalCase"],
         "vue/max-attributes-per-line": "off",
-        "vue/html-indent": "off",
+        "vue/html-indent": 0,
         "vue/html-self-closing": [
             "error",
             {
@@ -37,6 +32,13 @@
                     "void": "always",
                     "normal": "always"
                 }
+            }
+        ],
+        "vue/html-closing-bracket-newline": [
+            "error",
+            {
+                "singleline": "never",
+                "multiline": "always"
             }
         ]
     }
