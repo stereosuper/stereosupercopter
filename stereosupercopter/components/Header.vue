@@ -1,6 +1,6 @@
 <template>
     <header role="banner" class="header container">
-        <a href="https://www.stereosuper.fr">
+        <a href="https://www.stereosuper.fr" target="_blank" rel="noopener noreferrer">
             <svg width="94" height="43" viewBox="0 0 94 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     fill-rule="evenodd"
@@ -33,7 +33,7 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-    padding-top: 15vh;
+    padding-top: 12vh;
 }
 
 .logo {

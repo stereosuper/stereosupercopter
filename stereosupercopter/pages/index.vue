@@ -28,7 +28,7 @@
 
             <div class="container">
                 <div class="content">
-                    <ol v-if="data.defis">
+                    <ol v-if="data.defis" class="defis">
                         <li v-for="defi in data.defis" :key="defi.text">
                             <p>{{ defi.text }}</p>
                         </li>
@@ -42,7 +42,31 @@
                             :href="data.btn[0].link"
                             class="btn"
                         >
-                            {{ data.btn[0].text }}
+                            <span>{{ data.btn[0].text }}</span>
+                            <svg
+                                class="icon i1"
+                                width="23"
+                                height="9"
+                                viewBox="0 0 23 9"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M19.6695 8.5H18.4172L20.7477 4.5L18.4172 0.5H19.6695L22.452 4.413V4.60425L19.6695 8.5ZM0 4.84775L0.0175 4.0825L21.0435 4.152V4.84775H0H0Z"
+                                />
+                            </svg>
+                            <svg
+                                class="icon i2"
+                                width="23"
+                                height="9"
+                                viewBox="0 0 23 9"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M19.6695 8.5H18.4172L20.7477 4.5L18.4172 0.5H19.6695L22.452 4.413V4.60425L19.6695 8.5ZM0 4.84775L0.0175 4.0825L21.0435 4.152V4.84775H0H0Z"
+                                />
+                            </svg>
                         </a>
                     </p>
                 </div>
@@ -139,8 +163,8 @@ export default {
 
                 tl = gsap.timeline({ repeat: -1 });
 
-                tl.to(chopper, 2, { y: 10 });
-                tl.to(chopper, 1.5, { y: 0 });
+                tl.to(chopper, 2, { y: 10, rotation: 5 });
+                tl.to(chopper, 1.5, { y: 0, rotation: 5 });
 
                 sp.play();
             },
@@ -159,31 +183,7 @@ export default {
 }
 
 .stereosupercopter {
-    max-width: 45vw;
-    min-width: 600px;
-    position: fixed;
-    top: 15vh;
-    right: -$gutter;
-    z-index: 10;
-    pointer-events: none;
-    transform: rotate(5deg);
-    > img {
-        position: relative;
-        margin: 17% 0 0;
-        z-index: 1;
-    }
-}
-
-.helices {
-    position: absolute;
-    width: 200%;
-    height: 0;
-    padding: 0 0 31%;
-    top: 0;
-    left: 50%;
-    background-repeat: no-repeat;
-    background-size: 200% auto;
-    transform: translate3d(-50%, 0, 0);
+    display: none;
 }
 
 .network {
@@ -196,10 +196,45 @@ export default {
     }
 }
 
+.defis {
+    margin-bottom: 80px;
+}
+
+@media (min-width: $tablet) {
+    .stereosupercopter {
+        display: block;
+        width: 55vw;
+        max-width: 700px;
+        min-width: 450px;
+        position: fixed;
+        top: 15vh;
+        right: -$gutter;
+        z-index: 10;
+        pointer-events: none;
+        transform: rotate(5deg);
+        > img {
+            position: relative;
+            margin: 17% 0 0;
+            z-index: 1;
+        }
+    }
+
+    .helices {
+        position: absolute;
+        width: 200%;
+        height: 0;
+        padding: 0 0 31%;
+        top: 0;
+        left: 50%;
+        background-repeat: no-repeat;
+        background-size: 200% auto;
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
 @media (min-width: $desktop-big) {
     .stereosupercopter {
         top: 10vh;
-        right: $gutter;
     }
 }
 </style>

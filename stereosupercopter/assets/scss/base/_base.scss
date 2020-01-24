@@ -37,9 +37,10 @@ h6 {
 }
 
 h1 {
-    margin: 0 0 45px -3px;
-    font-size: 15rem;
-    line-height: 1;
+    margin: 0 0 45px -0.08em;
+    font-size: 10.5vw;
+    letter-spacing: -0.02em;
+    line-height: 0.9;
     span {
         display: block;
         &:first-child {
@@ -126,14 +127,93 @@ button {
     }
 }
 
+.btn {
+    position: relative;
+    font-family: $gotham;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $primary;
+    span {
+        display: inline-block;
+        transition: transform 0.25s ease-in-out;
+    }
+    .icon {
+        width: 22px;
+        height: 8px;
+        margin: -2px 0 0 7px;
+        font-size: 1.8rem;
+    }
+    .i1 {
+        transition: transform 0.25s ease-in-out, opacity 0.35s ease-in-out;
+    }
+    .i2 {
+        position: absolute;
+        top: -1px;
+        left: -10px;
+        bottom: 0;
+        margin: auto;
+        transform: translate3d(-100%, 0, 0);
+        opacity: 0;
+        transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    }
+    &:hover,
+    &:focus {
+        opacity: 0.8;
+        .i1 {
+            transform: translate3d(100%, 0, 0);
+            opacity: 0;
+        }
+        .i2 {
+            transform: translate3d(0, 0, 0);
+            transition-delay: 0.15s;
+            opacity: 1;
+        }
+        span {
+            transform: translate3d(19px, 0, 0);
+            transition-delay: 0.1s;
+        }
+    }
+}
+
 /******* CLASSES GENERALES  *******/
 
 .icon {
-    width: 1em;
-    height: 1em;
     fill: currentColor;
 }
 
 .hidden {
     display: none !important;
+}
+
+@media (min-width: 1200px) {
+    @media (max-height: 870px) {
+        h1 {
+            font-size: 20vh;
+        }
+    }
+
+    @media (max-height: 700px) {
+        h1 {
+            font-size: 12rem;
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    h1 {
+        font-size: 10rem;
+    }
+}
+
+@media (max-width: 700px) {
+    h1 {
+        font-size: 7rem;
+    }
+}
+
+@media (max-width: 380px) {
+    h1 {
+        font-size: 5.3rem;
+    }
 }
