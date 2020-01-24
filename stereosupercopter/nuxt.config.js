@@ -106,34 +106,39 @@ export default {
                 hid: 'twitter:image',
                 name: 'twitter:image',
                 content: '/images/MyBusinessOgImage.png'
+            },
+            {
+                name: 'theme-color',
+                content: '#000'
             }
-            // COMBAK: Uncomment and update real favicon generator tile color
-            // {
-            //     name: 'msapplication-TileColor',
-            //     content: '#fff',
-            // },
         ],
         link: [
-            // COMBAK: Uncomment and update real favicon generator favicon 32x32
-            // {
-            //     rel: 'icon',
-            //     type: 'image/png',
-            //     sizes: '32x32',
-            //     href: '/favicon-32x32.png',
-            // },
-            // COMBAK: Uncomment and update real favicon generator favicon 16x16
-            // {
-            //     rel: 'icon',
-            //     type: 'image/png',
-            //     sizes: '16x16',
-            //     href: '/favicon-16x16.png',
-            // },
-            // COMBAK: Uncomment and update real favicon generator safari pinned tab
-            // {
-            //     rel: 'mask-icon',
-            //     href: '/safari-pinned-tab.svg',
-            //     color: '#fff',
-            // },
+            {
+                rel: 'manifest',
+                href: '/manifest.json'
+            },
+            {
+                rel: 'apple-touch-icon',
+                sizes: '180x180',
+                href: '/apple-touch-icon.png'
+            },
+            {
+                rel: 'icon',
+                type: 'image/png',
+                sizes: '32x32',
+                href: '/favicon-32x32.png'
+            },
+            {
+                rel: 'icon',
+                type: 'image/png',
+                sizes: '16x16',
+                href: '/favicon-16x16.png'
+            },
+            {
+                rel: 'mask-icon',
+                href: '/safari-pinned-tab.svg',
+                color: '#000'
+            },
             {
                 rel: 'stylesheet',
                 type: 'text/css',
