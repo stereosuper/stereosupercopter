@@ -1,29 +1,52 @@
 /* Home specific style */
 
 .hero {
-    padding: 15vh 0 10vh;
+    padding: 60px 0 12vh;
     position: relative;
 }
 
 .stereosupercopter {
-    max-width: 40vw;
+    max-width: 45vw;
+    min-width: 600px;
     position: fixed;
-    top: 150px;
-    left: $gutter;
-    transform: rotate(-5deg);
+    top: 15vh;
+    right: -$gutter;
+    z-index: 10;
+    pointer-events: none;
+    transform: rotate(5deg);
     > img {
-        margin: 10% 0 0;
+        position: relative;
+        margin: 17% 0 0;
+        z-index: 1;
     }
 }
 
 .helices {
     position: absolute;
-    width: 150%;
+    width: 200%;
     height: 0;
-    padding: 0 0 23.3%;
+    padding: 0 0 31%;
     top: 0;
     left: 50%;
+
     background: url(../img/helices.png) no-repeat;
     background-size: 200% auto;
     transform: translate3d(-50%, 0, 0);
+}
+
+.network {
+    position: relative;
+    &:before {
+        content: '👉';
+        position: absolute;
+        top: 2px;
+        left: -40px;
+    }
+}
+
+@media (min-width: $desktop-big) {
+    .stereosupercopter {
+        top: 10vh;
+        right: $gutter;
+    }
 }

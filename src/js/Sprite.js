@@ -2,7 +2,7 @@ import { gsap } from 'gsap';
 
 function Sprite({
     image,
-    columns,
+    cols,
     rows,
     interval,
     loop = false,
@@ -10,7 +10,7 @@ function Sprite({
 }) {
     this.image = image;
     this.looped = loop;
-    this.cols = columns;
+    this.cols = cols;
     this.rows = rows;
     this.gridWidth = 100 / (this.cols - 1);
     this.gridHeight = 100 / (this.rows - 1);

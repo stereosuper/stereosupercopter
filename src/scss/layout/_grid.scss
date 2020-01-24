@@ -6,12 +6,12 @@
 }
 
 .container {
-    max-width: 1040px;
+    max-width: 1200px;
     padding: 0 $gutter;
     margin: 0 auto;
 }
 
 .content {
-    width: calc(50% + 47px); // 47px = logo width / 2
-    margin: 0 0 0 auto;
+    width: 70%;
+    max-width: 660px;
 }

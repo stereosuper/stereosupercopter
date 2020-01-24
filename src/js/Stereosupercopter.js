@@ -1,32 +1,40 @@
+import { gsap } from 'gsap';
 import Sprite from './Sprite';
 
 const stereosupercopter = () => {
     const copter = document.getElementById('copter');
+    const chopper = document.getElementById('chopper');
 
-    if (!copter) return;
-
-    const columns = 2;
-    const rows = 8;
+    if (!copter || !chopper) return;
 
     const spUrl = copter.getAttribute('data-src');
-    const spImage = new Image();
-    spImage.addEventListener(
+    const spImg = new Image();
+
+    let sp = null;
+    let tl = null;
+
+    spImg.addEventListener(
         'load',
         () => {
-            const spriteAnimation = new Sprite({
+            sp = new Sprite({
                 image: copter,
-                columns,
-                rows,
+                cols: 2,
+                rows: 8,
                 interval: 0.05,
-                loop: true,
-                numberEmpty: 0
+                loop: true
             });
 
-            spriteAnimation.play();
+            tl = gsap.timeline({ repeat: -1 });
+
+            tl.to(chopper, 2, { y: 10 });
+            tl.to(chopper, 1.5, { y: 0 });
+
+            sp.play();
         },
         false
     );
-    spImage.src = spUrl;
+
+    spImg.src = spUrl;
 };
 
 export default stereosupercopter;

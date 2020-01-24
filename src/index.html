@@ -44,13 +44,8 @@
     </head>
 
     <body>
-        <header role="banner" class="header">
-            <a
-                href="https://www.stereosuper.fr"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="logo"
-            >
+        <header role="banner" class="header container">
+            <a href="https://www.stereosuper.fr">
                 <svg
                     width="94"
                     height="43"
@@ -72,30 +67,24 @@
                     />
                 </svg>
             </a>
+            <p><strong>365</strong> jours. <strong>100</strong> missions.</p>
+            <p class="fade">
+                Bon... et pour les années bissextiles, on ajoute 1 mission.
+            </p>
         </header>
 
         <main role="main" class="main">
             <header class="hero">
-                <div class="stereosupercopter">
-                    <img
-                        src="img/stereosupercopter.png"
-                        alt="Stéréosupercopter"
-                    />
-                    <div
-                        class="helices"
-                        id="copter"
-                        data-src="http://localhost:3000/img/helices.png"
-                    ></div>
-                </div>
                 <div class="container">
                     <div class="content">
-                        <h1>Stéréosupercopter ?</h1>
-                        <p>365 jours. 100 Missions. Stéréosupercopter.</p>
-                        <p>
-                            Une liste de défis à réaliser sur l'ensemble de
-                            l'année.
-                            <br />
-                            Les défis réalisés sont à poster sur
+                        <h1>
+                            <span>Stéréo</span>
+                            <span>super</span>
+                            <span>copter</span>
+                        </h1>
+                        <p class="network">
+                            Ah oui et on postera les résultats des défis sur nos
+                            comptes
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -103,7 +92,7 @@
                             >
                                 Twitter
                             </a>
-                            ou
+                            &
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -111,24 +100,18 @@
                             >
                                 Instagram
                             </a>
-                            :
                         </p>
-                        <ul>
-                            <li>
-                                Mettre son prénom entre crochets : [ Baptiste
-                                🔥]
-                            </li>
-                            <li>
-                                Utiliser le hashtag
-                                <a
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    href="https://twitter.com/search?q=stereosupercopter&src=typed_query"
-                                    >#stereosupercopter</a
-                                >
-                                + le n° du défi (ex. #26)
-                            </li>
-                        </ul>
+                    </div>
+                    <div class="stereosupercopter" id="chopper">
+                        <img
+                            src="img/stereosupercopter.png"
+                            alt="Stéréosupercopter"
+                        />
+                        <div
+                            class="helices"
+                            id="copter"
+                            data-src="http://localhost:3000/img/helices.png"
+                        ></div>
                     </div>
                 </div>
             </header>
@@ -285,6 +268,10 @@
                 </div>
             </div>
         </main>
+
+        <footer role="contentinfo" class="footer container">
+            <p class="fade">© 2020 • Stéréosuper</p>
+        </footer>
 
         <script src="/main.js"></script>
     </body>

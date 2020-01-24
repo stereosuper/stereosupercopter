@@ -7,6 +7,14 @@
 }
 
 @font-face {
+    font-family: 'elena';
+    src: url('../fonts/Elena-Bold.woff2') format('woff2'),
+        url('../fonts/Elena-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'gotham';
     src: url('../fonts/Gotham-Medium.woff2') format('woff2'),
         url('../fonts/Gotham-Medium.woff') format('woff');

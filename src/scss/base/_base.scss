@@ -33,12 +33,31 @@ h6 {
     font-family: $gotham;
     font-size: 2.4rem;
     font-weight: 800;
-    letter-spacing: 0.05em;
     text-transform: uppercase;
+    -webkit-font-smoothing: auto;
+}
+
+h1 {
+    margin: 0 0 45px -3px;
+    font-size: 15rem;
+    line-height: 1;
+    span {
+        display: block;
+        &:first-child {
+            color: $primary;
+        }
+    }
 }
 
 p {
-    margin: 1.5em 0 0;
+    margin: 1.2em 0 0;
+    + .fade {
+        margin-top: 0;
+    }
+}
+
+.fade {
+    opacity: 0.4;
 }
 
 li {
@@ -69,7 +88,6 @@ ul {
     }
 }
 ol {
-    margin: 100px 0;
     counter-reset: counter;
     > li {
         margin: 0 0 10px;
@@ -89,6 +107,11 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+strong {
+    font-weight: 700;
+}
+
 /******* LIENS / BOUTONS *******/
 
 a,
