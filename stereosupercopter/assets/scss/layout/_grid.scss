@@ -1,6 +1,17 @@
 /* Grid */
 
+.main {
+    padding: 0 0 100px;
+    overflow: hidden;
+}
+
 .container {
-    max-width: $desktop-xxl;
+    max-width: 1200px;
+    padding: 0 $gutter;
     margin: 0 auto;
+}
+
+.content {
+    width: 70%;
+    max-width: 660px;
 }

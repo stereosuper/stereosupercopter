@@ -134,12 +134,17 @@ export default {
             //     href: '/safari-pinned-tab.svg',
             //     color: '#fff',
             // },
+            {
+                rel: 'stylesheet',
+                type: 'text/css',
+                href: 'https://cloud.typography.com/719316/609682/css/fonts.css'
+            }
         ]
     },
     /*
      ** Customize the progress-bar
      */
-    loading: '~/components/Layout/Loader.vue',
+    loading: '~/components/Loader.vue',
     /*
      ** Global CSS
      */

@@ -19,13 +19,12 @@
   },
   "dependencies": {
     "fastdom": "^1.0.9",
-    "gsap": "^2.1.3",
     "nuxt": "^2.0.0",
     "sharp": "^0.23.0"
   },
   "devDependencies": {
-    "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/apollo": "^4.0.0-rc10",
+    "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/robots": "^2.4.0",
     "@nuxtjs/sitemap": "^1.3.0",
     "@nuxtjs/style-resources": "^1.0.0",
@@ -40,6 +39,7 @@
     "eslint-loader": "^3.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.2.3",
+    "gsap": "^3.1.0",
     "node-fetch": "^2.6.0",
     "node-sass": "^4.12.0",
     "prettier": "^1.18.2",

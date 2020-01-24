@@ -1,10 +1,13 @@
-// SANS-SERIF
-/* @font-face {
-    font-family: '[Your font family name]';
-    src: local('[Your font family name] Light'),
-        url('~assets/fonts/[Your-font-family-name]/[Your-font-family-name]-Light.woff2') format('woff2'),
-        url('~assets/fonts/[Your-font-family-name]/[Your-font-family-name]-Light.woff') format('woff');
-    font-display: swap;
+@font-face {
+    font-family: 'elena';
+    src: url('../fonts/Elena-Regular.woff2') format('woff2'), url('../fonts/Elena-Regular.woff') format('woff');
+    font-weight: 400;
     font-style: normal;
-    font-weight: 300;
-} */
+}
+
+@font-face {
+    font-family: 'elena';
+    src: url('../fonts/Elena-Bold.woff2') format('woff2'), url('../fonts/Elena-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}

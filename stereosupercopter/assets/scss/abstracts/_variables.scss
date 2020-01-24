@@ -1,40 +1,29 @@
-// Variables 🧮 //
+// Variables //
 
-// Colors 🎨
-$black: #000;
+// Colors
 $white: #fff;
+$black: #000;
+$grey: #c4c4c4;
+$primary: #00a9e0;
 
-// Fonts ✍
-// serif
-$serif-font: serif;
+// Transition delay list
 
-// sans
-$sans-serif-font: sans-serif;
+// Grid
+$gutter: 30px;
 
-// Texts variables 🖌
-$text-size-mobile: 13;
-$text-size-desktop: 15;
+// Transitions
 
-// Components sizes 📏
-$header-height: 88px;
-$header-logo-height: 28px;
+$transition: 0.3s ease-in-out;
 
-// Grids variables 📐
-$gutter: 35px; // Space between columns = 70px
-$small-gutter: 15px;
-$line-height: 22px;
+// Fonts
 
-// Mediaqueries 📱
-// Horizontal sizes
-$desktop-xxl: 1400px;
-$desktop-large: 1280px;
+$elena: 'elena', sans-serif;
+$gotham: 'Gotham SSm A', 'Gotham SSm B', $elena;
+
+// Mediaqueries
+$desktop-big: 1200px;
 $desktop: 1100px;
 $desktop-small: 960px;
 $tablet: 780px;
 $phone: 580px;
 $phone-small: 400px;
-
-// Vertical sizes
-$phone-small-v: 600px;
-$desktop-v: 900px;
-$desktop-xxl-v: 1080px;
