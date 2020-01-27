@@ -29,7 +29,7 @@
             <div class="container">
                 <div class="content">
                     <ol v-if="data.defis" class="defis">
-                        <li v-for="defi in data.defis" :key="defi.text">
+                        <li v-for="defi in data.defis" :key="defi.text" :class="[{ done: defi.done }]">
                             <p>{{ defi.text }}</p>
                         </li>
                     </ol>
@@ -163,7 +163,7 @@ export default {
 
                 tl = gsap.timeline({ repeat: -1 });
 
-                tl.to(chopper, 2, { y: 10, rotation: 5 });
+                tl.to(chopper, 2, { y: 10, rotation: 4.5 });
                 tl.to(chopper, 1.5, { y: 0, rotation: 5 });
 
                 sp.play();
@@ -194,10 +194,21 @@ export default {
         top: 2px;
         left: -40px;
     }
+    /deep/ p {
+        opacity: 0.7;
+    }
 }
 
 .defis {
     margin-bottom: 80px;
+}
+
+.done {
+    opacity: 0.7;
+    p {
+        display: inline;
+        background: repeating-linear-gradient(#000, #000 13px, #fff 13px, #fff 15px, #000 15px, #000 30px);
+    }
 }
 
 @media (min-width: $tablet) {
