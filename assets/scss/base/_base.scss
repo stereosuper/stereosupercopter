@@ -95,9 +95,10 @@ ol {
         &:before {
             content: '#' counter(counter);
             width: 35px;
-            font-size: 1.6rem;
-            line-height: 30px;
+            font-size: 1.8rem;
+            line-height: 32px;
             left: -45px;
+            font-weight: 700;
             text-align: right;
         }
     }
