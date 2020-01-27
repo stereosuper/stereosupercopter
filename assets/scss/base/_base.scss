@@ -38,7 +38,7 @@ h6 {
 
 h1 {
     margin: 0 0 45px -0.08em;
-    font-size: 10.5vw;
+    font-size: 13vw;
     letter-spacing: -0.02em;
     line-height: 0.9;
     span {
@@ -186,7 +186,25 @@ button {
     display: none !important;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $phone-small) {
+    h1 {
+        font-size: 16vw;
+    }
+}
+
+@media (min-width: $tablet) {
+    h1 {
+        font-size: 10rem;
+    }
+}
+
+@media (min-width: $desktop) {
+    h1 {
+        font-size: 10.5vw;
+    }
+}
+
+@media (min-width: $desktop-big) {
     @media (max-height: 870px) {
         h1 {
             font-size: 20vh;
@@ -197,23 +215,5 @@ button {
         h1 {
             font-size: 12rem;
         }
-    }
-}
-
-@media (max-width: 960px) {
-    h1 {
-        font-size: 10rem;
-    }
-}
-
-@media (max-width: 700px) {
-    h1 {
-        font-size: 7rem;
-    }
-}
-
-@media (max-width: 380px) {
-    h1 {
-        font-size: 5.3rem;
     }
 }

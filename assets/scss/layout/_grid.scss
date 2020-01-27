@@ -11,7 +11,9 @@
     margin: 0 auto;
 }
 
-.content {
-    width: 70%;
-    max-width: 660px;
+@media (min-width: $tablet) {
+    .content {
+        width: 70%;
+        max-width: 660px;
+    }
 }
