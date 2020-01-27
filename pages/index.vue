@@ -167,6 +167,8 @@ export default {
                     loop: true
                 });
 
+                gsap.set(chopper, { rotation: 5 });
+
                 tl = gsap.timeline({ repeat: -1 });
 
                 tl.to(chopper, 2, { y: 10, rotation: 4.5, ease: 'none' });
@@ -239,7 +241,7 @@ export default {
         transform: rotate(5deg);
         > img {
             position: relative;
-            margin: 17% 0 0;
+            margin: 21.5% 0 0;
             z-index: 1;
         }
     }
