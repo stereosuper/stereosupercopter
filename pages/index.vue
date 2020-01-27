@@ -30,7 +30,12 @@
                 <div class="content">
                     <ol v-if="data.defis" class="defis">
                         <li v-for="defi in data.defis" :key="defi.text" :class="[{ done: defi.done }]">
-                            <p>{{ defi.text }}</p>
+                            <p v-if="defi.link">
+                                <a :href="defi.link" target="_blank" rel="noopener noreferrer">{{ defi.text }}</a>
+                            </p>
+                            <p v-else>
+                                {{ defi.text }}
+                            </p>
                         </li>
                     </ol>
 
@@ -80,7 +85,7 @@
 <script>
 import gql from 'graphql-tag';
 
-import gsap from 'gsap';
+import { gsap } from 'gsap';
 
 import Sprite from '~/assets/js/Sprite';
 
@@ -123,6 +128,7 @@ export default {
                             defis {
                                 text
                                 done
+                                link
                             }
                             btn {
                                 link
@@ -163,8 +169,8 @@ export default {
 
                 tl = gsap.timeline({ repeat: -1 });
 
-                tl.to(chopper, 2, { y: 10, rotation: 4.5 });
-                tl.to(chopper, 1.5, { y: 0, rotation: 5 });
+                tl.to(chopper, 2, { y: 10, rotation: 4.5, ease: 'none' });
+                tl.to(chopper, 1.5, { y: 0, rotation: 5, ease: 'none' });
 
                 sp.play();
             },
@@ -201,6 +207,14 @@ export default {
 
 .defis {
     margin-bottom: 80px;
+    a {
+        text-decoration: none;
+        &:hover,
+        &:focus {
+            color: #fff;
+            opacity: 0.7;
+        }
+    }
 }
 
 .done {
@@ -232,9 +246,9 @@ export default {
 
     .helices {
         position: absolute;
-        width: 200%;
+        width: 250%;
         height: 0;
-        padding: 0 0 31%;
+        padding: 0 0 39%;
         top: 0;
         left: 50%;
         background-repeat: no-repeat;
