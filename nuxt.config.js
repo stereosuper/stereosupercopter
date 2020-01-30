@@ -29,7 +29,7 @@ export default {
      ** Headers of the page
      */
     head: {
-        title: process.env.npm_package_name || '',
+        title: 'Stéréosupercopter',
         htmlAttrs: {
             lang: 'en'
         },
@@ -38,6 +38,11 @@ export default {
             {
                 name: 'viewport',
                 content: 'width=device-width, initial-scale=1'
+            },
+            {
+                name: 'description',
+                content:
+                    'Chez Stéréosuper, on aime les défis. On en a même fait toute une liste. 365 jours. 100 missions. Stéréosupercopter.'
             },
             { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
             {
@@ -55,36 +60,35 @@ export default {
                 property: 'og:site_name',
                 content: 'Stéréosupercopter'
             },
-            // COMBAK: Update open graph meta url
             {
                 hid: 'og:url',
                 property: 'og:url',
                 content: 'https://stereosupercopter.fr'
             },
             // COMBAK: Update open graph meta image
-            {
+            /*{
                 hid: 'og:image',
                 property: 'og:image',
                 content: '/images/MyBusinessOgImage.png'
-            },
+            },*/
             // COMBAK: Update open graph meta image:width
-            {
+            /*{
                 hid: 'og:image:width',
                 property: 'og:image:width',
                 content: '2000'
-            },
+            },*/
             // COMBAK: Update open graph meta image:height
-            {
+            /*{
                 hid: 'og:image:height',
                 property: 'og:image:height',
                 content: '1550'
-            },
+            },*/
             // COMBAK: Update open graph meta image:type
-            {
+            /*{
                 hid: 'og:image:type',
                 property: 'og:image:type',
                 content: 'image/png'
-            },
+            },*/
             {
                 hid: 'og:image:alt',
                 property: 'og:image:alt',
@@ -102,11 +106,11 @@ export default {
                 content: '@stereosuper'
             },
             // COMBAK: Update open graph meta twitter:image
-            {
+            /*{
                 hid: 'twitter:image',
                 name: 'twitter:image',
                 content: '/images/MyBusinessOgImage.png'
-            },
+            },*/
             {
                 name: 'theme-color',
                 content: '#000'
