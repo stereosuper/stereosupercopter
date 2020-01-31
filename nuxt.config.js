@@ -74,7 +74,7 @@ export default {
             {
                 hid: 'og:image',
                 property: 'og:image',
-                content: 'https://stereosupercopter.netlify.com/share.png'
+                content: 'https://stereosupercopter.fr/share.png'
             },
             {
                 hid: 'og:image:width',
