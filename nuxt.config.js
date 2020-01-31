@@ -56,6 +56,12 @@ export default {
                 content: 'Stéréosupercopter'
             },
             {
+                hid: 'og:description',
+                property: 'og:description',
+                content:
+                    'Chez Stéréosuper, on aime les défis. On en a même fait toute une liste. 365 jours. 100 missions. Stéréosupercopter.'
+            },
+            {
                 hid: 'og:site_name',
                 property: 'og:site_name',
                 content: 'Stéréosupercopter'
@@ -68,7 +74,7 @@ export default {
             {
                 hid: 'og:image',
                 property: 'og:image',
-                content: 'https://stereosupercopter.fr/share.png'
+                content: 'https://stereosupercopter.netlify.com/share.png'
             },
             {
                 hid: 'og:image:width',
