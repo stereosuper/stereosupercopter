@@ -68,7 +68,7 @@ export default {
             {
                 hid: 'og:image',
                 property: 'og:image',
-                content: '/share.png'
+                content: 'https://stereosupercopter.fr/share.png'
             },
             {
                 hid: 'og:image:width',
